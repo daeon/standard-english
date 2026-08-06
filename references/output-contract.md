@@ -1,63 +1,80 @@
 # Output Contract
 
-Choose the smallest output that satisfies the task.
+Choose the smallest output that satisfies the request. High consequence strengthens safeguards and review notes; it does not automatically change the requested mode.
+
+## Shared route header
+
+For standards-sensitive tasks, identify:
+
+```markdown
+**Route:** <no external profile required | selected profile stack>
+**Routing confidence:** High | Medium | Low
+**Evidence basis:** <authoritative material | supplied clauses/checklist | official public guidance | profile-level knowledge>
+**Claim level:** <permitted claim>
+```
+
+Omit fields that add no trust value for a simple low-risk task.
 
 ## Route only
 
-Use when the user asks which standard to use.
-
 ```markdown
-## Recommended profile
+## Recommended route
 
-**Primary:** <standard/profile>
-**Supporting:** <zero to two profiles>
-**Confidence:** High | Medium | Low
+**Governing source:** <if any>
+**Document/content profile:** <profile or none>
+**Language constraint:** <zero or one>
+**Delivery overlay:** <zero or one>
+**Routing confidence:** High | Medium | Low
 
 **Why:** <task-specific reason>
-**Material trade-off:** <what this profile optimizes and what it constrains>
+**Material trade-off:** <what the route protects and constrains>
 
 ## Alternative
 
-<Only include when meaningfully different.>
+<Only when meaningfully different.>
 
-## Confirmation
+## Decision required
 
-<Only include when the confirmation gate applies.>
+<Only when the routing gate applies.>
 ```
 
 ## Rewrite
 
-Return the usable revised content first. Then include only the notes needed for trust and review.
+Return the usable revision first.
 
 ```markdown
 ## Revised content
 
 <finished text>
 
-## Applied profile
+## Applied route
 
-- Primary: ...
-- Supporting: ...
+- Governing source: ...
+- Document/content profile: ...
+- Language constraint: ...
+- Delivery overlay: ...
+- Evidence and claim limit: ...
 
 ## Review notes
 
-- Assumptions: ...
-- Unresolved ambiguities: ...
+- Material assumptions: ...
+- Unresolved ambiguities or domain decisions: ...
 - Terminology gaps: ...
-- Human review required: yes/no and why
+- Human reviewer role: ...
 ```
 
-Do not clutter simple low-risk rewrites with a long compliance report.
+Do not clutter a simple rewrite with empty sections.
 
 ## Audit
 
 ```markdown
 ## Audit summary
 
-- Selected profile: ...
-- Evidence basis: authoritative text supplied | organization checklist | public guidance | profile-level review only
+- Selected route: ...
+- Evidence basis: full authoritative material | supplied clauses | organization checklist | official public guidance | profile-level review only
+- Assessment scope: ...
 - Overall result: ...
-- Compliance claim: not assessed | candidate alignment only | checked against supplied authoritative profile
+- Claim: not assessed | candidate alignment only | checked against supplied material | conformance assessment performed within stated scope
 
 ## Findings
 
@@ -66,11 +83,11 @@ Do not clutter simple low-risk rewrites with a long compliance report.
 
 ## Unresolved decisions
 
-- ...
+- <decision and responsible role>
 
 ## Human review
 
-- ...
+- <role and reason>
 ```
 
 ### Severity
@@ -91,20 +108,30 @@ Use exactly one:
 - domain decision;
 - preference.
 
-## Rewrite + audit
+## Rewrite plus audit
 
 Return:
 
 1. revised content;
-2. profile selection;
+2. selected route and evidence basis;
 3. compact table of material changes;
-4. unresolved ambiguities and human-review needs.
+4. unresolved decisions and required reviewer roles.
 
-Do not repeat every minor edit. Group similar changes.
+Group similar minor edits.
+
+## Repository edit
+
+When repository tools are available and the user asks to implement changes:
+
+1. edit files on a branch;
+2. keep generated files synchronized with their source data;
+3. run or extend validation;
+4. summarize material changes and validation results;
+5. open a pull request unless the user explicitly requested a direct commit to the default branch.
+
+Do not return only a proposed patch when the requested edits can be performed.
 
 ## Profile builder
-
-Use when the user supplies standards, organization rules, examples, terminology, or templates and wants a reusable AI profile.
 
 ```markdown
 # <Profile name>
@@ -139,11 +166,11 @@ Use when the user supplies standards, organization rules, examples, terminology,
 
 - ...
 
-## Safety/legal escalation
+## Safety, legal, and domain escalation
 
 - ...
 
-## Output and audit behavior
+## Evidence and claims
 
 - ...
 
@@ -160,43 +187,33 @@ Use when the user supplies standards, organization rules, examples, terminology,
 - ...
 ```
 
-## Confirmation wording
-
-When confirmation is required, make the choice easy:
-
-```markdown
-I recommend **A: <profile>** because <reason>.
-
-**B: <alternative>** is better when <condition>.
-
-The material difference is <effect on obligations, safety, nuance, or compliance scope>.
-
-Please choose **A** or **B** before I produce the final rewrite/audit.
-```
-
-Do not ask broad questions such as “What style do you want?” when the task evidence supports two concrete choices.
-
 ## Claims language
-
-Use accurate labels:
 
 | Evidence available | Permitted claim |
 |---|---|
-| public principles only | “edited using an <X>-informed profile” |
-| user-supplied checklist | “checked against the supplied <X> checklist” |
-| authoritative excerpt for relevant clauses | “checked against the supplied clauses” |
-| full authoritative material plus required validation | “conformance assessment performed” — still state scope and reviewer limits |
-| no authoritative evidence | never say compliant, certified, passed, or fully conformant |
+| public principles or model knowledge only | “edited using an <X>-informed profile” |
+| current official public guidance | “reviewed against current public <X> guidance” |
+| supplied organization checklist or glossary | “checked against the supplied <X> checklist/glossary” |
+| supplied authoritative clauses | “checked against the supplied clauses within the stated scope” |
+| full authoritative material plus required validation and human roles | “conformance assessment performed within the stated scope” |
+| missing authoritative evidence | never say compliant, certified, passed, or fully conformant |
+
+Special limits:
+
+- CAN-ASC-3.1 conformance requires intended-audience involvement and evaluation; text review alone is insufficient.
+- WCAG conformance is page-level and cannot be established by wording review alone.
+- ASD-STE100 conformance requires the applicable issue, terminology decisions, and checking process.
 
 ## Final quality check
 
-Before returning output, verify:
+Verify:
 
 - meaning, obligations, permissions, prohibitions, conditions, exceptions, and sequence are preserved;
-- selected profiles are not redundant or incompatible;
+- profiles have distinct roles and are compatible;
 - terminology matches supplied authoritative sources;
 - normative keywords follow one defined system;
 - warnings retain hazard, consequence, and avoidance action;
-- claims do not exceed the available evidence;
-- ambiguities are surfaced rather than silently invented away;
-- output is usable in the user's requested channel.
+- claims do not exceed evidence;
+- ambiguities and domain decisions remain visible;
+- the output is usable in the requested channel;
+- repository changes pass available validation.
