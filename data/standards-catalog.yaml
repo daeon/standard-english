@@ -1,0 +1,436 @@
+schema_version: 1
+last_reviewed: 2026-08-06
+freshness_warning_days: 180
+profiles:
+  - id: iso-24495-1
+    name: "Plain language — Part 1: Governing principles and guidelines"
+    designation: ISO 24495-1:2023
+    authority: ISO
+    role: content-language-profile
+    status: published
+    publication_date: 2023-06
+    lifecycle_note: Current published edition as verified on the ISO catalogue.
+    official_source: https://www.iso.org/standard/78907.html
+    access: paid-with-public-abstract
+    scope:
+      - General audience-centred plain-language documents.
+      - Public, customer, policy, and mixed-expertise technical communication.
+    exclusions:
+      - Does not replace technical accessibility standards.
+      - Does not by itself govern formal requirements, hazard classification, or legal validity.
+    conformance_prerequisites:
+      - Applicable authoritative text.
+      - Defined assessment scope.
+      - Evidence that intended readers can find, understand, and use the information when a conformance claim is made.
+    last_verified: 2026-08-06
+
+  - id: can-asc-3-1
+    name: "Plain Language"
+    designation: CAN-ASC-3.1:2025
+    authority: Accessibility Standards Canada
+    role: accessibility-requirement
+    status: published
+    publication_date: 2025-10
+    lifecycle_note: First published edition; voluntary standard that can be used for conformity assessment.
+    official_source: https://accessible.canada.ca/standards-and-technical-guides/standards-and-technical-guides-database/can-asc-312025-plain-language
+    access: public-html
+    scope:
+      - Accessible communication in Canadian contexts, especially federally regulated entities.
+      - Communication in varied formats and languages for intended audiences.
+    exclusions:
+      - Textual inspection alone cannot establish conformance.
+      - Does not replace applicable law, regulation, or specialized domain standards.
+    conformance_prerequisites:
+      - Applicable authoritative text.
+      - Intended-audience involvement.
+      - Evaluation and testing with members of the intended audience.
+      - Assessment of wording, structure, design, format, and audience needs.
+    last_verified: 2026-08-06
+
+  - id: iso-24495-2
+    name: "Plain language — Part 2: Legal communication"
+    designation: ISO 24495-2:2025
+    authority: ISO
+    role: content-language-profile
+    status: published
+    publication_date: 2025-08
+    lifecycle_note: First published edition.
+    official_source: https://www.iso.org/standard/85774.html
+    access: paid-with-public-abstract
+    scope:
+      - Legal information that readers must understand and use to exercise rights or obligations.
+      - Contracts, notices, policies, terms, and process explanations when legal effect is preserved.
+    exclusions:
+      - Not a legal-validity or jurisdictional-compliance standard.
+      - Does not replace qualified legal review.
+    conformance_prerequisites:
+      - Applicable authoritative text.
+      - Identified jurisdiction and governing legal sources.
+      - Qualified legal review for final high-consequence use.
+    last_verified: 2026-08-06
+
+  - id: iso-24495-3
+    name: "Plain language — Part 3: Science writing"
+    designation: ISO 24495-3:2026
+    authority: ISO
+    role: content-language-profile
+    status: published
+    publication_date: 2026-05
+    lifecycle_note: First published edition.
+    official_source: https://www.iso.org/standard/86938.html
+    access: paid-with-public-abstract
+    scope:
+      - Plain science communication for readers with varied education, backgrounds, and interests.
+      - Public summaries, decision-maker briefings, and educational science content.
+    exclusions:
+      - Not a research-reporting standard, journal style, methodology checklist, or discipline-specific reporting guide.
+      - Does not validate scientific accuracy or causal claims.
+    conformance_prerequisites:
+      - Applicable authoritative text.
+      - Subject-matter review of scientific claims, uncertainty, methods, and limitations.
+    last_verified: 2026-08-06
+
+  - id: asd-ste100
+    name: "Simplified Technical English — Standard for Technical Documentation"
+    designation: ASD-STE100 Issue 9, January 2025
+    authority: ASD Simplified Technical English Maintenance Group
+    role: controlled-language
+    status: published
+    publication_date: 2025-01-15
+    lifecycle_note: Current official issue; Issue 10 is scheduled for January 2028.
+    official_source: https://www.asd-ste100.org/STE_downloads.html
+    access: free-on-request
+    scope:
+      - Controlled vocabulary and grammar for technical documentation.
+      - Maintenance, operations, aerospace, defence, manufacturing, and multilingual procedures where restriction adds value.
+    exclusions:
+      - Not the default for all technical writing.
+      - Can remove necessary nuance when applied without approved terminology decisions.
+    conformance_prerequisites:
+      - Official applicable issue.
+      - Approved dictionary decisions and project terminology.
+      - Appropriate STE checking process.
+      - Subject-matter review.
+    last_verified: 2026-08-06
+
+  - id: iec-ieee-82079-1
+    name: "Preparation of information for use of products — Part 1"
+    designation: IEC/IEEE 82079-1:2019
+    authority: IEC and IEEE
+    role: document-system
+    status: published
+    publication_date: 2019
+    lifecycle_note: Current published edition in the ISO catalogue; verify lifecycle before formal assessment.
+    official_source: https://www.iso.org/standard/71620.html
+    access: paid-with-public-abstract
+    scope:
+      - Information for use and product instructions across the information-development lifecycle.
+      - Target groups, task analysis, structure, media, warnings, instructions, and evaluation.
+    exclusions:
+      - Not primarily a sentence-style guide.
+      - Does not determine hazard severity by itself.
+    conformance_prerequisites:
+      - Applicable authoritative text.
+      - Product, task, user, and lifecycle evidence.
+      - Safety framework and qualified review when hazards exist.
+    last_verified: 2026-08-06
+
+  - id: iso-iec-ieee-26514
+    name: "Systems and software engineering — Design and development of information for users"
+    designation: ISO/IEC/IEEE 26514:2022
+    authority: ISO, IEC, and IEEE
+    role: document-system
+    status: published
+    publication_date: 2022-01
+    lifecycle_note: Current published edition.
+    official_source: https://www.iso.org/standard/77451.html
+    access: paid-with-public-abstract
+    scope:
+      - Software tutorials, how-to guides, concepts, references, troubleshooting, release, and migration information.
+      - Design and maintenance of information for users throughout the lifecycle.
+    exclusions:
+      - Not a complete word-level editorial guide.
+      - Does not replace product terminology or accessibility implementation requirements.
+    conformance_prerequisites:
+      - Applicable authoritative text.
+      - Defined information-product scope and user needs.
+      - Evaluation appropriate to the intended users.
+    last_verified: 2026-08-06
+
+  - id: iso-iec-ieee-29148
+    name: "Systems and software engineering — Life cycle processes — Requirements engineering"
+    designation: ISO/IEC/IEEE 29148:2018
+    authority: ISO, IEC, and IEEE
+    role: document-system
+    status: published-to-be-revised
+    publication_date: 2018-11
+    lifecycle_note: Confirmed in 2024; revision project ISO/IEC/IEEE DIS 29148, Edition 3, is under development as of 2026.
+    official_source: https://www.iso.org/standard/72089.html
+    access: paid-with-public-abstract
+    scope:
+      - Stakeholder, system, software, and service requirements engineering.
+      - Requirements information items, qualities, traceability, and verification concerns.
+    exclusions:
+      - Do not use a draft revision as the governing edition unless the project explicitly adopts it.
+      - Do not invent thresholds or acceptance criteria to make requirements measurable.
+    conformance_prerequisites:
+      - Governing edition or project-adopted draft identified.
+      - Applicable authoritative text or approved organization checklist.
+      - Requirements-owner review and traceability evidence.
+    last_verified: 2026-08-06
+
+  - id: rfc-2119-8174
+    name: "RFC normative key words"
+    designation: RFC 2119 and RFC 8174
+    authority: IETF
+    role: normative-keyword-system
+    status: published
+    publication_date: 2017-05
+    lifecycle_note: RFC 8174 updates RFC 2119 usage by clarifying uppercase normative key words.
+    official_source: https://www.rfc-editor.org/rfc/rfc8174
+    access: public
+    scope:
+      - Internet, API, protocol, and interoperability specifications that explicitly invoke these RFCs.
+    exclusions:
+      - Ordinary uppercase words are not automatically normative without the required definition.
+      - Do not mix casually with ISO-style shall/should/may/can.
+    conformance_prerequisites:
+      - Document explicitly defines RFC 2119/8174 key-word usage.
+      - Requirement interpretation reviewed by the specification owner.
+    last_verified: 2026-08-06
+
+  - id: iso-iec-directives-part-2
+    name: "ISO/IEC Directives, Part 2 — Principles and rules for structure and drafting"
+    designation: Current ISO/IEC Directives, Part 2 with applicable amendments
+    authority: ISO and IEC
+    role: governing-framework
+    status: living-official-rules
+    publication_date: 2026
+    lifecycle_note: Official rules page lists the current Part 2 and a 2026 amendment; verify the exact applicable edition for formal drafting.
+    official_source: https://www.iso.org/directives-and-policies.html
+    access: public-official
+    scope:
+      - Structure and drafting of ISO and IEC documents.
+      - ISO-style verbal forms for requirements, recommendations, permissions, and possibilities.
+    exclusions:
+      - Not the default normative system for RFCs or contracts governed by other rules.
+    conformance_prerequisites:
+      - Applicable current edition and amendments.
+      - Governing standards-body or publication rules.
+    last_verified: 2026-08-06
+
+  - id: iso-704
+    name: "Terminology work — Principles and methods"
+    designation: ISO 704:2022
+    authority: ISO
+    role: terminology-method
+    status: published
+    publication_date: 2022-07
+    lifecycle_note: Current published edition, Edition 4.
+    official_source: https://www.iso.org/standard/79077.html
+    access: paid-with-public-abstract
+    scope:
+      - Concept systems, definitions, preferred terms, admitted terms, deprecated terms, and designation formation.
+    exclusions:
+      - Does not specify the exchange format for terminology data.
+      - Does not replace domain authority for definitions.
+    conformance_prerequisites:
+      - Applicable authoritative text for formal assessment.
+      - Domain-approved concepts, definitions, and sources.
+      - Terminologist or subject-matter review where material.
+    last_verified: 2026-08-06
+
+  - id: iso-30042-tbx
+    name: "Management of terminology resources — TermBase eXchange"
+    designation: ISO 30042:2019
+    authority: ISO
+    role: interchange-format
+    status: published-to-be-revised
+    publication_date: 2019-04
+    lifecycle_note: Published Edition 2 and marked to be revised.
+    official_source: https://www.iso.org/standard/62510.html
+    access: paid-with-public-abstract
+    scope:
+      - Machine exchange of terminology resources and definition of TBX dialects.
+    exclusions:
+      - Not a prose-writing style or terminology-development method by itself.
+    conformance_prerequisites:
+      - Applicable authoritative text and selected TBX dialect.
+      - Schema and data validation.
+    last_verified: 2026-08-06
+
+  - id: iso-18587
+    name: "Translation services — Post-editing of machine translation output — Requirements"
+    designation: ISO 18587:2017
+    authority: ISO
+    role: process-standard
+    status: published-to-be-revised
+    publication_date: 2017-04
+    lifecycle_note: Published Edition 1 and marked to be revised.
+    official_source: https://www.iso.org/standard/62970.html
+    access: paid-with-public-abstract
+    scope:
+      - Full human post-editing of machine-translation output and post-editor competence.
+    exclusions:
+      - Applies only to content processed by MT systems.
+      - Generic AI rewriting is not an ISO 18587 workflow.
+    conformance_prerequisites:
+      - Applicable authoritative text.
+      - Human post-editor with required competence.
+      - Defined MT input, source text, quality scope, and review process.
+    last_verified: 2026-08-06
+
+  - id: wcag-2-2
+    name: "Web Content Accessibility Guidelines 2.2"
+    designation: W3C Recommendation, 12 December 2024
+    authority: W3C
+    role: accessibility-requirement
+    status: recommendation
+    publication_date: 2024-12-12
+    lifecycle_note: Current W3C Recommendation for WCAG 2.2; consult the latest published version and errata.
+    official_source: https://www.w3.org/TR/WCAG22/
+    access: public
+    scope:
+      - Testable accessibility success criteria for web content at levels A, AA, and AAA.
+      - Language, labels, errors, consistency, task completion, semantics, interaction, and implementation.
+    exclusions:
+      - Wording review alone cannot establish WCAG conformance.
+      - Conformance applies to full pages and requires technology and human evaluation.
+    conformance_prerequisites:
+      - Defined pages and conformance level.
+      - Technical implementation review.
+      - Automated and human evaluation.
+      - Required conformance-claim information when a claim is made.
+    last_verified: 2026-08-06
+
+  - id: w3c-coga-usable
+    name: "Making Content Usable for People with Cognitive and Learning Disabilities"
+    designation: W3C Working Group Note, 29 April 2021
+    authority: W3C
+    role: informative-guidance
+    status: working-group-note
+    publication_date: 2021-04-29
+    lifecycle_note: Supplemental guidance; not a WCAG conformance requirement.
+    official_source: https://www.w3.org/TR/coga-usable/
+    access: public
+    scope:
+      - Cognitive and learning accessibility patterns, clear purpose, manageable steps, help, recovery, and reduced memory burden.
+    exclusions:
+      - Not a W3C Recommendation and not independently conformance-testable as WCAG.
+    conformance_prerequisites:
+      - Do not make a formal conformance claim to this guidance unless another governing policy defines one.
+    last_verified: 2026-08-06
+
+  - id: ansi-z535-6
+    name: "Product Safety Information in Product Manuals, Instructions and Other Collateral Materials"
+    designation: ANSI Z535.6-2023
+    authority: ANSI and NEMA
+    role: governing-framework
+    status: published
+    publication_date: 2023
+    lifecycle_note: Current edition listed by ANSI as of verification.
+    official_source: https://webstore.ansi.org/standards/nema/ansiz5352023
+    access: paid-with-public-summary
+    scope:
+      - Product safety messages in manuals, instructions, and collateral materials when the governing product or jurisdiction uses ANSI Z535.
+    exclusions:
+      - Do not choose or downgrade hazard severity from prose alone.
+      - Other jurisdictions and industries can require different frameworks.
+    conformance_prerequisites:
+      - Applicable authoritative edition.
+      - Approved hazard analysis and signal-word decision.
+      - Qualified product-safety review.
+    last_verified: 2026-08-06
+
+  - id: ansi-z535-7
+    name: "Product Safety Information in Electronic Media"
+    designation: ANSI Z535.7-2024
+    authority: ANSI and NEMA
+    role: governing-framework
+    status: published
+    publication_date: 2024
+    lifecycle_note: Current edition listed by ANSI as of verification.
+    official_source: https://webstore.ansi.org/standards/nema/ansiz5352024
+    access: paid-with-public-summary
+    scope:
+      - Product safety information presented in electronic media when the governing framework adopts ANSI Z535.
+    exclusions:
+      - Does not replace hazard analysis, product-specific regulation, or implementation testing.
+    conformance_prerequisites:
+      - Applicable authoritative edition.
+      - Approved hazard and severity decisions.
+      - Electronic-media implementation review and qualified safety review.
+    last_verified: 2026-08-06
+
+  - id: google-developer-style
+    name: "Google developer documentation style"
+    designation: Google Developer Documentation Style Guide (living)
+    authority: Google
+    role: editorial-guide
+    status: living-guidance
+    publication_date: null
+    lifecycle_note: Public living guidance; conventions can change without an edition number.
+    official_source: https://developers.google.com/style
+    access: public
+    scope:
+      - Developer-facing documentation, APIs, commands, code examples, and technical terminology.
+    exclusions:
+      - Not an ISO or regulatory compliance standard.
+      - Does not override product terminology or governing publication rules.
+    conformance_prerequisites:
+      - Current official guide or supplied organization fork when claiming adherence.
+    last_verified: 2026-08-06
+
+  - id: microsoft-writing-style
+    name: "Microsoft Writing Style Guide"
+    designation: Microsoft Writing Style Guide (living)
+    authority: Microsoft
+    role: editorial-guide
+    status: living-guidance
+    publication_date: null
+    lifecycle_note: Public living guidance.
+    official_source: https://learn.microsoft.com/style-guide/welcome/
+    access: public
+    scope:
+      - Software UI, procedures, help, errors, interaction language, and technology terminology.
+    exclusions:
+      - Not a formal accessibility or product-safety standard.
+    conformance_prerequisites:
+      - Current official guide or supplied organization adaptation.
+    last_verified: 2026-08-06
+
+  - id: govuk-content-guidance
+    name: "GOV.UK content guidance"
+    designation: GOV.UK content guidance (living)
+    authority: UK Government Digital Service
+    role: editorial-guide
+    status: living-guidance
+    publication_date: null
+    lifecycle_note: Public living content-design guidance.
+    official_source: https://www.gov.uk/guidance/content-design
+    access: public
+    scope:
+      - Task-oriented public-service web content, user needs, scanning, and service completion.
+    exclusions:
+      - Does not automatically govern non-UK jurisdictions or replace legal and accessibility requirements.
+    conformance_prerequisites:
+      - Current official guidance and applicable service standards.
+    last_verified: 2026-08-06
+
+  - id: canada-content-style
+    name: "Canada.ca Content Style Guide"
+    designation: Canada.ca Content Style Guide (living)
+    authority: Government of Canada
+    role: editorial-guide
+    status: living-guidance
+    publication_date: null
+    lifecycle_note: Public living federal content guidance.
+    official_source: https://design.canada.ca/style-guide/
+    access: public
+    scope:
+      - Canadian federal web conventions, inclusive wording, spelling, dates, links, and content presentation.
+    exclusions:
+      - Not a substitute for CAN-ASC-3.1 audience evaluation or other binding requirements.
+    conformance_prerequisites:
+      - Current official guide and applicable department or program rules.
+    last_verified: 2026-08-06
