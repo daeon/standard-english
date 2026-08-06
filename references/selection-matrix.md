@@ -1,66 +1,62 @@
 # Selection Matrix
 
-Use this matrix to classify the task before choosing a language profile.
+Classify only the dimensions that can change routing. Use the matrix as structured judgment, not a compliance calculator.
 
-## 1. Purpose
+## 1. Intended outcome
 
-| Purpose | Routing implication |
+| Outcome | Routing implication |
 |---|---|
-| explain or educate | prioritize audience understanding and concept sequencing |
-| instruct or troubleshoot | prioritize task completion, action order, prerequisites, feedback, and recovery |
-| specify requirements | preserve normative force, atomicity, verifiability, conditions, and actors |
-| warn or protect | preserve hazard, consequence, avoidance, urgency, and severity |
-| establish rights or duties | preserve legal effect, jurisdiction, exceptions, definitions, and remedies |
-| communicate science | preserve uncertainty, evidence strength, methods, limitations, and causal boundaries |
-| localize or translate | control terminology, ambiguity, sentence structure, and post-editing workflow |
-| label an interface | prioritize brevity, consistency, accessibility, and exact UI behavior |
+| explain or educate | prioritize audience understanding and concept sequence |
+| instruct or troubleshoot | prioritize task completion, prerequisites, feedback, recovery, and action order |
+| specify requirements | preserve normative force, atomicity, conditions, actors, feasibility, and verifiability |
+| warn or protect | preserve hazard, consequence, avoidance action, urgency, and approved severity |
+| establish rights or duties | preserve legal effect, jurisdiction, definitions, exceptions, and remedies |
+| communicate science | preserve evidence strength, uncertainty, methods, limitations, and causal boundaries |
+| localize or translate | control terminology, ambiguity, units, locale, and review workflow |
+| label an interface | prioritize brevity, exact behavior, consistency, accessibility, and product terminology |
+| govern terminology | distinguish concepts, preferred terms, definitions, synonyms, and deprecated terms |
+| perform conformance-oriented review | identify governing edition, evidence basis, scope, and permitted claim |
 
 ## 2. Audience
 
-Classify the least-expert intended reader who must act correctly.
+Classify the least-expert intended audience who must act correctly:
 
-- general public
-- customer or end user
-- software developer
-- operator or technician
-- engineer or architect
-- regulator or auditor
-- lawyer or contracting party
-- scientist or specialist
-- translator or multilingual reader
-- cognitively diverse or accessibility-sensitive audience
+- general public or customer;
+- software developer;
+- operator or technician;
+- engineer or architect;
+- regulator or auditor;
+- lawyer or contracting party;
+- scientist or specialist;
+- translator or multilingual reader;
+- cognitively diverse or accessibility-sensitive audience.
 
-Record:
-
-- domain knowledge;
-- language proficiency;
-- reading conditions;
-- urgency and stress;
-- device or channel;
-- cost of misunderstanding.
+Record only material characteristics: domain knowledge, language proficiency, reading conditions, urgency, device or channel, and cost of misunderstanding.
 
 ## 3. Document type
 
 | Document type | Strong candidates |
 |---|---|
-| public notice, form, policy explanation | ISO 24495-1; CAN-ASC-3.1 in Canada; WCAG/COGA for digital content |
-| maintenance or operating procedure | IEC/IEEE 82079-1 + ASD-STE100; add safety framework when hazards exist |
-| software help, tutorial, CLI or API guide | ISO/IEC/IEEE 26514 + Google or Microsoft style; WCAG for web delivery |
-| PRD, SRS, acceptance criteria, protocol | ISO/IEC/IEEE 29148 + one normative keyword system |
-| standard or formal specification | ISO Directives Part 2 or the governing standards body's drafting rules |
-| RFC or interoperability protocol | RFC 2119 + RFC 8174 |
-| contract, privacy notice, terms, legal explanation | ISO 24495-2 + jurisdiction-specific legal review |
-| scientific summary or research communication | ISO 24495-3 + field-specific reporting guidance |
-| warning, caution, safety manual | ANSI Z535.6/Z535.7 or applicable product/jurisdiction framework |
-| terminology list or ontology | ISO 704; use TBX/ISO 30042 when machine exchange matters |
-| translated or machine-translated text | ISO 18587 + terminology profile + source-language profile |
-| UI strings and error messages | Microsoft style or product-specific UI guide + WCAG/COGA |
+| public notice, form, policy explanation | ISO 24495-1; CAN-ASC-3.1 in Canadian accessibility contexts; delivery overlay when digital |
+| maintenance or operating procedure | IEC/IEEE 82079-1; ASD-STE100 when controlled language is justified; applicable safety framework |
+| software help, tutorial, CLI, or API guide | ISO/IEC/IEEE 26514 plus a developer editorial guide; accessibility overlay when web-based |
+| PRD, SRS, acceptance criteria, protocol | ISO/IEC/IEEE 29148 plus one normative-keyword system |
+| formal standard or specification | governing publication rules or ISO/IEC Directives Part 2 |
+| RFC or interoperability protocol | RFC 2119 and RFC 8174 when explicitly invoked |
+| contract, privacy notice, legal explanation | ISO 24495-2 plus jurisdiction-specific legal review |
+| public science communication | ISO 24495-3 plus any field-specific factual review |
+| scientific journal or academic paper | publication and discipline reporting rules; ISO 24495-3 is not the governing profile |
+| warning or safety manual | applicable ANSI, ISO, IEC, regulatory, or organization safety framework |
+| terminology list or ontology | ISO 704; TBX only when machine exchange matters |
+| full human post-editing of MT output | ISO 18587 plus terminology and source-content profiles |
+| UI strings and error messages | product or Microsoft-style UI conventions plus accessibility and terminology overlays |
+| casual message, routine copyedit, commit message | normally no external profile required |
 
 ## 4. Normative force
 
-Determine whether the text:
+Determine whether each statement:
 
-- describes facts;
+- describes a fact;
 - recommends behavior;
 - permits behavior;
 - imposes a requirement;
@@ -69,116 +65,102 @@ Determine whether the text:
 - defines a term;
 - gives a non-normative example.
 
-If normative force exists, select and enforce one keyword system.
+When normative force exists, select one governing keyword system.
 
 ### RFC system
 
-Use for Internet, API, interoperability, and software protocol specifications when the document defines RFC 2119/8174 usage.
+Use for Internet and interoperability specifications that explicitly define RFC 2119/8174 usage:
 
-- MUST / MUST NOT
-- SHOULD / SHOULD NOT
-- MAY
+- MUST / MUST NOT;
+- SHOULD / SHOULD NOT;
+- MAY.
 
 ### ISO-style system
 
-Use for standards-like documents and formal specifications following ISO drafting conventions.
+Use for standards-like documents governed by the applicable ISO/IEC drafting rules:
 
-- shall: requirement
-- should: recommendation
-- may: permission
-- can: possibility or capability
+- shall: requirement;
+- should: recommendation;
+- may: permission;
+- can: possibility or capability.
 
-Do not infer that ordinary lowercase uses are normative unless the document defines them that way.
+Do not infer normative meaning from ordinary lowercase words unless the document defines it.
 
 ## 5. Consequence
 
-| Consequence | Routing behavior |
+| Consequence | Safeguard |
 |---|---|
-| low: cosmetic or preference | choose automatically |
-| moderate: user confusion, support cost, failed task | choose automatically; report assumptions |
-| high: outage, data loss, financial impact, security exposure | preserve technical precision; include audit report and human review recommendation |
-| critical: injury, legal rights, regulated compliance, emergency response | trigger confirmation gate and qualified human review |
+| low | execute automatically |
+| moderate | execute and state material assumptions |
+| high | preserve technical precision; surface domain decisions; identify reviewer role |
+| critical | preserve source meaning; apply domain and human-review gates; ask about routing only when materially ambiguous |
 
-## 6. Domain
+Consequence does not decide the profile and does not automatically change a rewrite into an audit.
 
-Check for domain overlays:
+## 6. Domain overlays
 
-- aerospace, defence, maintenance: ASD-STE100 may be appropriate;
-- software user information: ISO/IEC/IEEE 26514;
-- product instructions: IEC/IEEE 82079-1;
-- requirements engineering: ISO/IEC/IEEE 29148;
-- public administration in Canada: CAN-ASC-3.1 and Canada.ca guidance;
-- web accessibility: WCAG 2.2 and COGA guidance;
-- legal communication: ISO 24495-2;
-- scientific communication: ISO 24495-3;
-- safety communication: applicable ANSI, ISO, IEC, regulatory, or organizational safety framework.
+Check whether a distinct domain risk justifies an overlay:
+
+- aerospace, defence, maintenance, multilingual operations;
+- software information for users;
+- product instructions;
+- requirements engineering;
+- public administration in Canada;
+- digital accessibility;
+- legal communication;
+- public science communication;
+- safety communication;
+- terminology and localization.
+
+Do not select a domain merely because the content mentions related vocabulary.
 
 ## 7. Channel
 
-Account for:
-
-- printed manual;
-- PDF;
-- responsive web page;
-- mobile UI;
-- terminal or CLI;
-- API reference;
-- chatbot response;
-- email or notification;
-- spoken script;
-- translation source text.
-
-Channel affects length, navigation, visibility of warnings, step structure, link wording, and accessibility.
+Account for printed manual, PDF, responsive web, mobile UI, terminal, API reference, chatbot, email, notification, spoken script, or translation source. Channel affects navigation, length, warning visibility, step structure, link wording, and accessibility, but channel alone rarely determines a formal standard.
 
 ## 8. Localization
 
-Ask internally:
+Check:
 
-- Is English a source language for translation?
-- Are readers non-native speakers?
-- Is machine translation expected?
-- Is a termbase available?
-- Are locale, units, date formats, and regulatory terms controlled?
+- whether English is source content for translation;
+- whether readers are non-native speakers;
+- whether machine translation is expected;
+- whether a termbase exists;
+- whether locale, units, dates, and regulatory terms are controlled.
 
-If yes, add terminology control and reduce avoidable ambiguity. Do not erase culturally or legally necessary distinctions.
+Add terminology or localization support only when it protects a real requirement. Do not erase culturally or legally necessary distinctions.
 
 ## 9. Evidence available
 
-Classify the governing material:
+Classify evidence independently from fit:
 
-- authoritative standard text supplied;
-- licensed excerpt supplied;
-- organization checklist supplied;
-- approved glossary supplied;
-- public official guidance available;
-- only public summaries or model knowledge available.
+- full authoritative standard and required validation process;
+- relevant licensed or authoritative clauses;
+- approved organization checklist, policy, or glossary;
+- current public official guidance;
+- public summaries or model knowledge only.
 
-The weaker the evidence, the weaker the compliance claim must be.
+Evidence controls claim strength and audit certainty, not conceptual profile fit.
 
-## Candidate scoring
+## Fit evaluation
 
-Rank each candidate profile against these factors:
+Evaluate candidates qualitatively:
 
-| Factor | Weight |
-|---|---:|
-| direct match to document purpose | 3 |
-| direct match to domain/document type | 3 |
-| protects high-consequence meaning | 3 |
-| matches audience and channel | 2 |
-| supports terminology/localization need | 2 |
-| authoritative material is available | 2 |
-| introduces unnecessary restriction | -2 |
-| overlaps another selected profile | -1 |
-| conflicts with governing framework | eliminate |
-
-Use the score to structure judgment, not to manufacture mathematical certainty.
+| Factor | Question |
+|---|---|
+| direct outcome match | Does this profile govern the actual communication outcome? |
+| document/domain match | Does it govern this information product or professional context? |
+| consequence protection | Does it protect the highest-cost plausible misunderstanding? |
+| audience/channel fit | Does it serve the people and delivery conditions? |
+| distinct role | Does it add a non-duplicative function to the stack? |
+| unnecessary restriction | Would it make the content mechanical, incomplete, or less precise without compensating value? |
+| conflict | Does it contradict a governing source or selected normative system? If yes, eliminate it. |
 
 ## Tie-breaking
 
-When candidates are close:
-
-1. prefer the profile required by contract, regulator, organization, or publication venue;
-2. otherwise prefer the profile closest to the document type;
-3. otherwise prefer the profile that protects the highest-cost failure;
-4. otherwise use a general plain-language profile as primary and a focused style guide as support;
-5. ask for confirmation only when the remaining difference is material.
+1. Apply mandatory governing sources.
+2. Prefer the profile closest to the document and outcome.
+3. Prefer the route that protects the highest-cost failure.
+4. Prefer the smaller compatible stack.
+5. Use a general plain-language profile only when it adds audience value.
+6. Ask for a choice only when remaining differences are material.
