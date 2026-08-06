@@ -9,6 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / "SKILL.md"
+VALIDATOR = Path(__file__).resolve()
 
 REQUIRED_FILES = [
     SKILL,
@@ -88,6 +89,8 @@ def validate_local_links(text: str) -> None:
 def validate_repository_name_leaks() -> None:
     for path in ROOT.rglob("*"):
         if not path.is_file() or ".git" in path.parts:
+            continue
+        if path.resolve() == VALIDATOR:
             continue
         if path.suffix not in {".md", ".py", ".yml", ".yaml"}:
             continue
