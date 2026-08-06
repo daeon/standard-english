@@ -1,0 +1,180 @@
+schema_version: 1
+cases:
+  - id: ordinary-teams-message
+    input: Make this short Teams message friendlier.
+    expected:
+      route: no-external-profile
+      confirmation: false
+      output_mode: rewrite
+
+  - id: commit-message
+    input: Rewrite this Git commit message so it is clearer.
+    expected:
+      route: no-external-profile
+      confirmation: false
+      output_mode: rewrite
+
+  - id: public-explanation
+    input: Rewrite this customer explanation so a general audience can find and understand the action they need to take.
+    expected:
+      document_profile: iso-24495-1
+      confirmation: false
+      output_mode: rewrite
+
+  - id: canadian-accessible-notice
+    input: Rewrite this federal Canadian public notice and assess whether it meets the Canadian plain-language standard.
+    expected:
+      document_profile: can-asc-3-1
+      allowed_supporting:
+        - canada-content-style
+      confirmation: false
+      evidence_gate: true
+      audience_testing_required: true
+      output_mode: rewrite-plus-audit
+
+  - id: api-tutorial
+    input: Rewrite this API authentication tutorial for external developers.
+    expected:
+      document_profile: iso-iec-ieee-26514
+      allowed_supporting:
+        - google-developer-style
+        - wcag-2-2
+      confirmation: false
+      output_mode: rewrite
+
+  - id: ui-error
+    input: Improve this mobile application's validation error message.
+    expected:
+      allowed_primary:
+        - microsoft-writing-style
+        - no-external-profile
+      allowed_supporting:
+        - wcag-2-2
+        - w3c-coga-usable
+      confirmation: false
+      output_mode: rewrite
+
+  - id: software-requirements-rfc
+    input: Audit this interoperability protocol. The introduction defines MUST, SHOULD, and MAY using RFC 2119 and RFC 8174.
+    expected:
+      document_profile: iso-iec-ieee-29148
+      language_constraint: rfc-2119-8174
+      forbidden:
+        - iso-iec-directives-part-2
+      confirmation: false
+      output_mode: audit
+
+  - id: iso-style-requirements
+    input: Rewrite these requirements for an ISO-style product specification using shall, should, may, and can.
+    expected:
+      document_profile: iso-iec-ieee-29148
+      language_constraint: iso-iec-directives-part-2
+      forbidden:
+        - rfc-2119-8174
+      confirmation: false
+      output_mode: rewrite
+
+  - id: maintenance-procedure
+    input: Rewrite this multilingual aircraft maintenance procedure using controlled technical English.
+    expected:
+      document_profile: iec-ieee-82079-1
+      language_constraint: asd-ste100
+      confirmation: false
+      output_mode: rewrite
+
+  - id: generic-developer-guide
+    input: Improve this conceptual architecture guide for senior software engineers. Do not use controlled English.
+    expected:
+      allowed_primary:
+        - iso-iec-ieee-26514
+        - no-external-profile
+      forbidden:
+        - asd-ste100
+      confirmation: false
+      output_mode: rewrite
+
+  - id: legal-explanation-known-jurisdiction
+    input: Rewrite this British Columbia tenancy-rights explanation. Preserve the cited statute and have legal counsel review the result.
+    expected:
+      document_profile: iso-24495-2
+      confirmation: false
+      human_review_role: legal-counsel
+      output_mode: rewrite
+
+  - id: public-science-summary
+    input: Rewrite this vaccine-effectiveness study summary for members of the public while preserving uncertainty and limitations.
+    expected:
+      document_profile: iso-24495-3
+      confirmation: false
+      human_review_role: scientific-subject-matter-expert
+      output_mode: rewrite
+
+  - id: journal-paper
+    input: Edit this manuscript for submission to Nature and check the reporting requirements.
+    expected:
+      route: governing-publication-rules
+      forbidden:
+        - iso-24495-3
+      confirmation: false
+      output_mode: audit
+
+  - id: terminology-governance
+    input: Build a preferred-term glossary from our approved product taxonomy and flag synonym drift.
+    expected:
+      document_profile: iso-704
+      confirmation: false
+      output_mode: profile-builder
+
+  - id: terminology-exchange
+    input: Convert our approved termbase into a machine-exchange profile and validate the TBX dialect.
+    expected:
+      document_profile: iso-704
+      delivery_overlay: iso-30042-tbx
+      confirmation: false
+      output_mode: profile-builder
+
+  - id: mt-post-editing
+    input: Fully post-edit this machine-translated manual using our approved bilingual termbase.
+    expected:
+      document_profile: iso-18587
+      allowed_supporting:
+        - iso-704
+        - asd-ste100
+        - iso-24495-1
+      human_review_role: qualified-post-editor
+      confirmation: false
+      output_mode: rewrite
+
+  - id: generic-ai-rewrite-not-mt
+    input: Rewrite this English draft generated by an AI assistant.
+    expected:
+      forbidden:
+        - iso-18587
+      confirmation: false
+      output_mode: rewrite
+
+  - id: wcag-copy-review
+    input: Review the labels, instructions, and error text on this web form for accessibility.
+    expected:
+      delivery_overlay: wcag-2-2
+      allowed_supporting:
+        - w3c-coga-usable
+      confirmation: false
+      output_mode: audit
+      wcag_page_conformance_claim: false
+
+  - id: product-safety-manual
+    input: Rewrite these approved product safety messages for a US product manual using ANSI Z535.6-2023.
+    expected:
+      governing_source: ansi-z535-6
+      confirmation: false
+      human_review_role: product-safety-professional
+      output_mode: rewrite
+
+  - id: electronic-safety-message
+    input: Review these approved hazard messages in an embedded touchscreen using ANSI Z535.7-2024.
+    expected:
+      governing_source: ansi-z535-7
+      confirmation: false
+      human_review_role: product-safety-professional
+      output_mode: audit

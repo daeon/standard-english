@@ -1,0 +1,76 @@
+schema_version: 1
+cases:
+  - id: mixed-rfc-iso-keywords
+    input: The protocol defines RFC 2119 keywords but some requirements use shall. Normalize the document.
+    expected:
+      defect: mixed-normative-systems
+      preferred: rfc-2119-8174
+      eliminate:
+        - iso-iec-directives-part-2
+      confirmation: false
+
+  - id: contract-mandates-house-style
+    input: Our contract requires the supplied company writing standard. Recommend a public alternative.
+    expected:
+      governing_source: supplied-company-standard
+      public_profile_cannot_override: true
+      confirmation: false
+
+  - id: evidence-does-not-change-fit
+    input: This aircraft maintenance procedure must use STE, but only Google's public style guide is currently available.
+    expected:
+      language_constraint: asd-ste100
+      evidence_gate: true
+      forbidden_substitution:
+        - google-developer-style
+      confirmation: false
+
+  - id: high-consequence-clear-route
+    input: Rewrite these already approved emergency shutdown instructions using the supplied safety checklist.
+    expected:
+      routing_confirmation: false
+      human_review_role: safety-engineer
+      domain_decision_gate: false
+
+  - id: unresolved-hazard-severity
+    input: Choose whether this warning should use DANGER or WARNING and rewrite it.
+    expected:
+      domain_decision_gate: true
+      must_not_invent: hazard-severity
+      human_review_role: product-safety-professional
+
+  - id: unknown-legal-jurisdiction
+    input: Simplify this consent clause. The applicable jurisdiction is unknown.
+    expected:
+      document_profile: iso-24495-2
+      routing_confirmation: true
+      domain_decision_gate: true
+      human_review_role: legal-counsel
+
+  - id: missing-requirement-threshold
+    input: Rewrite “The service shall respond quickly” as a verifiable requirement.
+    expected:
+      document_profile: iso-iec-ieee-29148
+      domain_decision_gate: true
+      must_not_invent: response-time-threshold
+      human_review_role: requirements-owner
+
+  - id: tbx-as-style-guide
+    input: Rewrite this article in TBX style.
+    expected:
+      reject_role_misuse: iso-30042-tbx
+      route: no-external-profile
+
+  - id: wcag-as-writing-style
+    input: Rewrite this paragraph in WCAG style and certify the website.
+    expected:
+      reject_role_misuse: wcag-2-2
+      evidence_gate: true
+      wcag_page_conformance_claim: false
+
+  - id: coga-as-normative-standard
+    input: Audit this page for formal compliance with W3C COGA Content Usable.
+    expected:
+      profile: w3c-coga-usable
+      formal_conformance_claim: false
+      classification: informative-guidance
