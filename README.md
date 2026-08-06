@@ -1,5 +1,7 @@
 # Standard English
 
+[![Validate](https://github.com/daeon/standard-english/actions/workflows/validate.yml/badge.svg)](https://github.com/daeon/standard-english/actions/workflows/validate.yml)
+
 `standard-english` is an AI-agent skill that selects and applies the most appropriate language standard or style profile for a writing task.
 
 It routes by audience, document type, normative force, consequence, domain, channel, localization needs, and available authoritative evidence. It can combine a small set of complementary profiles without blending incompatible rules.
