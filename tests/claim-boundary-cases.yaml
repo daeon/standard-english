@@ -1,0 +1,61 @@
+schema_version: 1
+cases:
+  - id: model-memory-only
+    evidence: model-memory-only
+    requested_claim: ISO 24495-1 compliant
+    permitted_claim: edited using an ISO 24495-1-informed profile
+    forbidden_terms:
+      - compliant
+      - certified
+      - passed
+      - fully conformant
+
+  - id: official-public-guidance
+    evidence: current-official-public-guidance
+    requested_claim: Google style compliant
+    permitted_claim: reviewed against current public Google developer-documentation guidance
+
+  - id: supplied-checklist
+    evidence: supplied-organization-checklist
+    requested_claim: passed our checklist
+    permitted_claim: checked against the supplied organization checklist
+
+  - id: supplied-clauses
+    evidence: supplied-authoritative-clauses
+    requested_claim: fully conformant
+    permitted_claim: checked against the supplied clauses within the stated scope
+
+  - id: full-authority-and-process
+    evidence: full-authoritative-material-and-required-validation
+    requested_claim: conformance assessment
+    permitted_claim: conformance assessment performed within the stated scope
+
+  - id: can-asc-text-only
+    evidence: full-standard-without-audience-testing
+    requested_claim: CAN-ASC-3.1 conformant
+    permitted_claim: text reviewed against supplied CAN-ASC-3.1 requirements; intended-audience evaluation remains required
+    formal_conformance_claim: false
+
+  - id: wcag-copy-only
+    evidence: text-and-copy-review-only
+    requested_claim: WCAG 2.2 AA compliant
+    permitted_claim: copy reviewed for candidate WCAG 2.2 language-related issues
+    formal_conformance_claim: false
+
+  - id: ste-without-project-terms
+    evidence: official-issue-without-approved-project-terminology
+    requested_claim: ASD-STE100 conformant
+    permitted_claim: edited using the supplied ASD-STE100 issue; project terminology decisions remain unverified
+    formal_conformance_claim: false
+
+  - id: iso-18587-ai-rewrite
+    evidence: generative-ai-rewrite-without-mt-post-editor
+    requested_claim: ISO 18587 compliant
+    permitted_claim: no ISO 18587 claim permitted
+    formal_conformance_claim: false
+
+  - id: draft-standard
+    evidence: public-draft-revision
+    requested_claim: compliant with the next ISO/IEC/IEEE 29148 edition
+    permitted_claim: experimental review against the identified draft; not assessed against a published governing edition
+    formal_conformance_claim: false
