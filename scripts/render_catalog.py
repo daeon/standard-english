@@ -37,40 +37,8 @@ def load_catalog(path: Path) -> dict[str, Any]:
     return data
 
 
-def bullets(items: list[str]) -> str:
-    return "\n".join(f"- {item}" for item in items)
-
-
-def render_profile(profile: dict[str, Any]) -> str:
-    designation = profile["designation"]
-    lines = [
-        f"### {designation} — {profile['name']}",
-        "",
-        f"- **Registry ID:** `{profile['id']}`",
-        f"- **Authority:** {profile['authority']}",
-        f"- **Role:** `{profile['role']}`",
-        f"- **Status:** `{profile['status']}`",
-        f"- **Publication:** {profile.get('publication_date') or 'living guidance'}",
-        f"- **Access:** `{profile['access']}`",
-        f"- **Official source:** {profile['official_source']}",
-        f"- **Last verified:** {profile['last_verified']}",
-        "",
-        f"**Lifecycle:** {profile['lifecycle_note']}",
-        "",
-        "**Use for**",
-        "",
-        bullets(profile["scope"]),
-        "",
-        "**Do not use as**",
-        "",
-        bullets(profile["exclusions"]),
-        "",
-        "**Conformance prerequisites**",
-        "",
-        bullets(profile["conformance_prerequisites"]),
-        "",
-    ]
-    return "\n".join(lines)
+def cell(value: Any) -> str:
+    return str(value).replace("|", "\\|").replace("\n", " ")
 
 
 def render(data: dict[str, Any]) -> str:
@@ -88,7 +56,7 @@ def render(data: dict[str, Any]) -> str:
         f"- **Registry reviewed:** {data['last_reviewed']}",
         f"- **Freshness warning:** {data['freshness_warning_days']} days",
         "",
-        "Use this catalog as a routing aid, not as authoritative standard text. Edition, lifecycle, role, access, scope, exclusions, and conformance prerequisites are explicit so unlike sources do not compete as peer writing styles.",
+        "Use this catalog as a routing aid, not as authoritative standard text. The YAML registry is the source of truth for complete scope, exclusions, lifecycle notes, official sources, and conformance prerequisites.",
         "",
         "## Role model",
         "",
@@ -127,17 +95,35 @@ def render(data: dict[str, Any]) -> str:
         items = sorted(grouped.get(role, []), key=lambda p: p["designation"].lower())
         if not items:
             continue
-        lines.extend([f"## {ROLE_LABELS[role]}", ""])
+        lines.extend([
+            f"## {ROLE_LABELS[role]}",
+            "",
+            "| ID | Designation | Status | Access | Primary use | Critical exclusion | Verified |",
+            "|---|---|---|---|---|---|---|",
+        ])
         for profile in items:
-            lines.append(render_profile(profile))
-
-    unknown_roles = sorted(set(grouped) - set(ROLE_ORDER))
-    for role in unknown_roles:
-        lines.extend([f"## Other: {role}", ""])
-        for profile in sorted(grouped[role], key=lambda p: p["designation"].lower()):
-            lines.append(render_profile(profile))
+            lines.append(
+                "| " + " | ".join([
+                    f"`{cell(profile['id'])}`",
+                    cell(profile["designation"]),
+                    cell(profile["status"]),
+                    cell(profile["access"]),
+                    cell(profile["scope"][0]),
+                    cell(profile["exclusions"][0]),
+                    cell(profile["last_verified"]),
+                ]) + " |"
+            )
+        lines.append("")
 
     lines.extend([
+        "## Required conformance boundaries",
+        "",
+        "- **CAN-ASC-3.1:** intended-audience involvement, evaluation, and testing are required; textual inspection alone is insufficient.",
+        "- **ASD-STE100:** the applicable issue, approved terminology decisions, and an appropriate checking process are required.",
+        "- **WCAG 2.2:** wording review alone cannot establish full-page conformance; implementation and human evaluation are also required.",
+        "- **ISO 24495-3:** applies to plain science communication, not research-reporting or journal-methodology compliance.",
+        "- **ISO 18587:** applies to full human post-editing of machine-translation output, not generic AI rewriting.",
+        "",
         "## Conflict precedence",
         "",
         "1. Law and regulation.",
