@@ -1,277 +1,137 @@
 # Standards Catalog
 
-Use this catalog as a routing aid, not as a substitute for authoritative standard text. Verify editions and organization-specific requirements when formal compliance matters.
-
-## General plain language
-
-### ISO 24495-1 — Plain language: governing principles and guidelines
-
-Use as the default audience-centered profile for written information. Optimize so intended readers can find, understand, and use what they need.
-
-Good fit:
-
-- public and customer communication;
-- policies and process explanations;
-- mixed-expertise technical explanations;
-- general document restructuring.
-
-Weak fit by itself:
-
-- controlled maintenance language;
-- formal requirements syntax;
-- safety-message classification;
-- jurisdiction-specific legal drafting.
-
-### CAN-ASC-3.1 — Plain language
-
-Prefer for Canadian public-facing and accessibility-sensitive communication, especially when organizational or governmental alignment in Canada matters.
-
-Combine with:
-
-- Canada.ca Content Style Guide for federal web/content conventions;
-- WCAG and COGA for digital accessibility;
-- a domain standard when the content is technical, legal, or safety-critical.
-
-## Domain plain language
-
-### ISO 24495-2 — Legal communication
-
-Use for making legal information easier to find, understand, and use while preserving legal effect.
-
-Use confirmation and legal-review gates for:
-
-- contracts;
-- terms and conditions;
-- privacy notices;
-- rights, duties, consent, remedies, and liability.
-
-Do not treat plain-language editing as legal validation.
-
-### ISO 24495-3 — Science writing
-
-Use for communication of scientific information to specialist or non-specialist audiences.
-
-Preserve:
-
-- evidence strength;
-- uncertainty;
-- correlation-versus-causation distinctions;
-- methodological limitations;
-- scope and generalizability.
-
-## Controlled technical language
-
-### ASD-STE100 — Simplified Technical English
-
-Use when controlled vocabulary and constrained grammar are valuable, especially for maintenance, aerospace, defence, manufacturing, multilingual operations, and translation-ready procedures.
-
-Good fit:
-
-- maintenance instructions;
-- operational procedures;
-- repeated technical actions;
-- documentation used by readers with varied English proficiency.
-
-Potential cost:
-
-- prose can become mechanical;
-- strict vocabulary can remove nuance;
-- domain terminology still needs controlled approval.
-
-Do not claim STE conformance without the applicable issue, approved dictionary decisions, and a proper checking process.
-
-## Product and software information
-
-### IEC/IEEE 82079-1 — Preparation of information for use
-
-Use for product instructions and information throughout the information-development lifecycle.
-
-Focus on:
-
-- target groups;
-- task and product analysis;
-- structure and media;
-- warnings and instructions;
-- evaluation of information quality.
-
-Use as a document-system profile rather than a sentence-style guide.
-
-### ISO/IEC/IEEE 26514 — Design and development of information for users
-
-Use for software user information such as:
-
-- tutorials;
-- how-to guides;
-- concepts;
-- references;
-- troubleshooting;
-- release and migration guidance.
-
-Combine with a concrete editorial guide such as Google or Microsoft for word-level conventions.
-
-## Requirements and specifications
-
-### ISO/IEC/IEEE 29148 — Requirements engineering
-
-Use for stakeholder, system, and software requirements.
-
-Check that requirements are:
-
-- necessary;
-- unambiguous;
-- singular or appropriately decomposed;
-- feasible;
-- verifiable;
-- traceable;
-- consistent;
-- bounded by explicit conditions and actors.
-
-Do not invent acceptance thresholds merely to make a requirement measurable. Flag missing thresholds.
-
-### RFC 2119 and RFC 8174
-
-Use for Internet, API, and interoperability specifications that define uppercase normative keywords.
-
-Control:
-
-- MUST / MUST NOT;
-- SHOULD / SHOULD NOT;
-- MAY.
-
-Preserve the distinction between absolute obligation, recommended behavior with valid exceptions, and permission.
-
-### ISO/IEC Directives, Part 2
-
-Use for ISO-like drafting and standards-style normative language.
-
-Control:
-
-- shall: requirement;
-- should: recommendation;
-- may: permission;
-- can: possibility or capability.
-
-Do not mix this system casually with RFC uppercase keywords.
-
-## Terminology
-
-### ISO 704 — Terminology work: principles and methods
-
-Use to build and govern concepts, definitions, preferred terms, admitted terms, deprecated terms, and concept relations.
-
-Best use with AI:
-
-- provide an authoritative glossary;
-- require one term per concept where practical;
-- distinguish a concept from the label used for it;
-- flag synonym drift and circular definitions.
-
-### ISO 30042 — TermBase eXchange (TBX)
-
-Use when terminology must move between authoring, translation, localization, and language-technology systems.
-
-This is primarily an interchange format, not a writing style.
-
-## Translation and post-editing
-
-### ISO 18587 — Post-editing of machine translation output
-
-Use to define human post-editing processes and competence expectations for machine-translated content.
-
-With generative AI, adapt it cautiously:
-
-- preserve source meaning;
-- use approved terminology;
-- detect omissions and additions;
-- validate numbers, units, names, and normative force;
-- require human review appropriate to consequence.
-
-Do not imply that general AI rewriting is identical to a certified translation workflow.
-
-## Accessibility
-
-### WCAG 2.2
-
-Use for web and digital content accessibility. Language-related concerns include readable language, meaningful labels and headings, consistent interactions, understandable errors, and assistance for task completion.
-
-WCAG is broader than writing style. Coordinate content changes with design, semantics, interaction, and implementation.
-
-### W3C COGA Content Usable
-
-Use as supporting guidance for cognitive and learning accessibility.
-
-Useful principles include:
-
-- clear purpose;
-- familiar words and patterns;
-- manageable steps;
-- visible help and recovery;
-- reduced memory burden;
-- avoidance of unnecessary distraction.
-
-Treat it as guidance unless a governing policy gives it normative force.
-
-## Safety communication
-
-### ANSI Z535.6 and Z535.7
-
-Use when the applicable product, organization, or jurisdiction follows ANSI safety-message conventions in manuals or electronic media.
-
-Preserve:
-
-- signal word or severity classification;
-- hazard;
-- consequence;
-- avoidance action;
-- placement and visibility.
-
-Never choose or downgrade hazard severity from prose alone. Escalate to the responsible safety professional.
-
-Other industries and jurisdictions may require different ISO, IEC, regulatory, or company-specific systems. The applicable governing framework overrides this catalog.
-
-## Public editorial guides
-
-### Google Developer Documentation Style Guide
-
-Use for developer-facing documentation, APIs, code examples, command lines, and technical terminology. It is practical and publicly accessible but is not an ISO compliance standard.
-
-### Microsoft Writing Style Guide
-
-Use for software UI, procedures, help, errors, and general technology communication. Particularly useful for consistent interaction language and user-facing terminology.
-
-### GOV.UK content guidance
-
-Use for strongly task-oriented public web content and content design. Focus on user needs, scanning, and completion of public-service tasks.
-
-### Canada.ca Content Style Guide
-
-Use for Canadian federal public content conventions, plain language, inclusive wording, spelling, dates, links, and web presentation.
+> Generated from `./data/standards-catalog.yaml`. Do not edit this file directly.
+
+- **Registry schema:** 1
+- **Registry reviewed:** 2026-08-06
+- **Freshness warning:** 180 days
+
+Use this catalog as a routing aid, not as authoritative standard text. The YAML registry is the source of truth for complete scope, exclusions, lifecycle notes, official sources, and conformance prerequisites.
+
+## Role model
+
+| Role | Function |
+|---|---|
+| governing-framework | Binding or precedence-setting drafting and safety framework |
+| document-system | Information-product structure, lifecycle, and quality |
+| content-language-profile | Audience-facing wording and structure |
+| controlled-language | Constrained vocabulary and grammar |
+| normative-keyword-system | Obligation, recommendation, permission, and capability |
+| terminology-method | Concepts, definitions, preferred terms, and relations |
+| interchange-format | Machine exchange rather than prose style |
+| process-standard | Professional workflow rather than sentence style |
+| accessibility-requirement | Accessibility outcomes and conformance requirements |
+| informative-guidance | Supplemental guidance without automatic normative force |
+| editorial-guide | Practical publication and word-level conventions |
 
 ## Selection patterns
 
-| Task | Recommended profile stack |
+| Task | Typical route |
 |---|---|
-| general public explanation | ISO 24495-1; add jurisdictional style guide |
-| Canadian public web page | CAN-ASC-3.1 + Canada.ca + WCAG/COGA |
-| API tutorial | ISO/IEC/IEEE 26514 + Google developer style + WCAG if web-based |
-| UI error message | Microsoft style + WCAG/COGA + product terminology |
-| software requirements | ISO/IEC/IEEE 29148 + RFC 2119/8174 or ISO Directives Part 2 |
-| maintenance procedure | IEC/IEEE 82079-1 + ASD-STE100 + applicable safety system |
-| terminology cleanup | ISO 704 + approved glossary; TBX when exchanging data |
-| privacy notice | ISO 24495-2 + jurisdiction-specific legal review + accessibility profile |
-| research summary | ISO 24495-3 + field reporting requirements |
-| translation source content | ISO 24495-1 or ASD-STE100 + ISO 704 terminology + ISO 18587 review process |
+| ordinary message or routine copyedit | no external profile required |
+| general public explanation | ISO 24495-1; add a jurisdictional guide only when useful |
+| Canadian accessible communication | CAN-ASC-3.1 plus applicable federal or organization guidance |
+| API tutorial | ISO/IEC/IEEE 26514 plus Google developer style; WCAG when web delivery is in scope |
+| software requirements | ISO/IEC/IEEE 29148 plus RFC 2119/8174 or applicable ISO/IEC drafting rules |
+| maintenance procedure | IEC/IEEE 82079-1 plus ASD-STE100 when controlled language adds value; governing safety framework when hazards exist |
+| terminology governance | ISO 704 plus approved glossary; TBX only for machine exchange |
+| legal explanation | ISO 24495-2 plus governing jurisdiction and legal review |
+| public science communication | ISO 24495-3 plus scientific subject-matter review |
+| full human MT post-editing | ISO 18587 plus terminology and source-content profiles |
+
+## Governing frameworks
+
+| ID | Designation | Status | Access | Primary use | Critical exclusion | Verified |
+|---|---|---|---|---|---|---|
+| `ansi-z535-6` | ANSI Z535.6-2023 | published | paid-with-public-summary | Product safety messages in manuals, instructions, and collateral materials when the governing product or jurisdiction uses ANSI Z535. | Do not choose or downgrade hazard severity from prose alone. | 2026-08-06 |
+| `ansi-z535-7` | ANSI Z535.7-2024 | published | paid-with-public-summary | Product safety information presented in electronic media when the governing framework adopts ANSI Z535. | Does not replace hazard analysis, product-specific regulation, or implementation testing. | 2026-08-06 |
+| `iso-iec-directives-part-2` | Current ISO/IEC Directives, Part 2 with applicable amendments | living-official-rules | public-official | Structure and drafting of ISO and IEC documents. | Not the default normative system for RFCs or contracts governed by other rules. | 2026-08-06 |
+
+## Document and information systems
+
+| ID | Designation | Status | Access | Primary use | Critical exclusion | Verified |
+|---|---|---|---|---|---|---|
+| `iec-ieee-82079-1` | IEC/IEEE 82079-1:2019 | published | paid-with-public-abstract | Information for use and product instructions across the information-development lifecycle. | Not primarily a sentence-style guide. | 2026-08-06 |
+| `iso-iec-ieee-26514` | ISO/IEC/IEEE 26514:2022 | published | paid-with-public-abstract | Software tutorials, how-to guides, concepts, references, troubleshooting, release, and migration information. | Not a complete word-level editorial guide. | 2026-08-06 |
+| `iso-iec-ieee-29148` | ISO/IEC/IEEE 29148:2018 | published-to-be-revised | paid-with-public-abstract | Stakeholder, system, software, and service requirements engineering. | Do not use a draft revision as the governing edition unless the project explicitly adopts it. | 2026-08-06 |
+
+## Content and language profiles
+
+| ID | Designation | Status | Access | Primary use | Critical exclusion | Verified |
+|---|---|---|---|---|---|---|
+| `iso-24495-1` | ISO 24495-1:2023 | published | paid-with-public-abstract | General audience-centred plain-language documents. | Does not replace technical accessibility standards. | 2026-08-06 |
+| `iso-24495-2` | ISO 24495-2:2025 | published | paid-with-public-abstract | Legal information that readers must understand and use to exercise rights or obligations. | Not a legal-validity or jurisdictional-compliance standard. | 2026-08-06 |
+| `iso-24495-3` | ISO 24495-3:2026 | published | paid-with-public-abstract | Plain science communication for readers with varied education, backgrounds, and interests. | Not a research-reporting standard, journal style, methodology checklist, or discipline-specific reporting guide. | 2026-08-06 |
+
+## Controlled languages
+
+| ID | Designation | Status | Access | Primary use | Critical exclusion | Verified |
+|---|---|---|---|---|---|---|
+| `asd-ste100` | ASD-STE100 Issue 9, January 2025 | published | free-on-request | Controlled vocabulary and grammar for technical documentation. | Not the default for all technical writing. | 2026-08-06 |
+
+## Normative keyword systems
+
+| ID | Designation | Status | Access | Primary use | Critical exclusion | Verified |
+|---|---|---|---|---|---|---|
+| `rfc-2119-8174` | RFC 2119 and RFC 8174 | published | public | Internet, API, protocol, and interoperability specifications that explicitly invoke these RFCs. | Ordinary uppercase words are not automatically normative without the required definition. | 2026-08-06 |
+
+## Terminology methods
+
+| ID | Designation | Status | Access | Primary use | Critical exclusion | Verified |
+|---|---|---|---|---|---|---|
+| `iso-704` | ISO 704:2022 | published | paid-with-public-abstract | Concept systems, definitions, preferred terms, admitted terms, deprecated terms, and designation formation. | Does not specify the exchange format for terminology data. | 2026-08-06 |
+
+## Interchange formats
+
+| ID | Designation | Status | Access | Primary use | Critical exclusion | Verified |
+|---|---|---|---|---|---|---|
+| `iso-30042-tbx` | ISO 30042:2019 | published-to-be-revised | paid-with-public-abstract | Machine exchange of terminology resources and definition of TBX dialects. | Not a prose-writing style or terminology-development method by itself. | 2026-08-06 |
+
+## Process standards
+
+| ID | Designation | Status | Access | Primary use | Critical exclusion | Verified |
+|---|---|---|---|---|---|---|
+| `iso-18587` | ISO 18587:2017 | published-to-be-revised | paid-with-public-abstract | Full human post-editing of machine-translation output and post-editor competence. | Applies only to content processed by MT systems. | 2026-08-06 |
+
+## Accessibility requirements
+
+| ID | Designation | Status | Access | Primary use | Critical exclusion | Verified |
+|---|---|---|---|---|---|---|
+| `can-asc-3-1` | CAN-ASC-3.1:2025 | published | public-html | Accessible communication in Canadian contexts, especially federally regulated entities. | Textual inspection alone cannot establish conformance. | 2026-08-06 |
+| `wcag-2-2` | W3C Recommendation, 12 December 2024 | recommendation | public | Testable accessibility success criteria for web content at levels A, AA, and AAA. | Wording review alone cannot establish WCAG conformance. | 2026-08-06 |
+
+## Informative accessibility guidance
+
+| ID | Designation | Status | Access | Primary use | Critical exclusion | Verified |
+|---|---|---|---|---|---|---|
+| `w3c-coga-usable` | W3C Working Group Note, 29 April 2021 | working-group-note | public | Cognitive and learning accessibility patterns, clear purpose, manageable steps, help, recovery, and reduced memory burden. | Not a W3C Recommendation and not independently conformance-testable as WCAG. | 2026-08-06 |
+
+## Editorial guides
+
+| ID | Designation | Status | Access | Primary use | Critical exclusion | Verified |
+|---|---|---|---|---|---|---|
+| `canada-content-style` | Canada.ca Content Style Guide (living) | living-guidance | public | Canadian federal web conventions, inclusive wording, spelling, dates, links, and content presentation. | Not a substitute for CAN-ASC-3.1 audience evaluation or other binding requirements. | 2026-08-06 |
+| `google-developer-style` | Google Developer Documentation Style Guide (living) | living-guidance | public | Developer-facing documentation, APIs, commands, code examples, and technical terminology. | Not an ISO or regulatory compliance standard. | 2026-08-06 |
+| `govuk-content-guidance` | GOV.UK content guidance (living) | living-guidance | public | Task-oriented public-service web content, user needs, scanning, and service completion. | Does not automatically govern non-UK jurisdictions or replace legal and accessibility requirements. | 2026-08-06 |
+| `microsoft-writing-style` | Microsoft Writing Style Guide (living) | living-guidance | public | Software UI, procedures, help, errors, interaction language, and technology terminology. | Not a formal accessibility or product-safety standard. | 2026-08-06 |
+
+## Required conformance boundaries
+
+- **CAN-ASC-3.1:** intended-audience involvement, evaluation, and testing are required; textual inspection alone is insufficient.
+- **ASD-STE100:** the applicable issue, approved terminology decisions, and an appropriate checking process are required.
+- **WCAG 2.2:** wording review alone cannot establish full-page conformance; implementation and human evaluation are also required.
+- **ISO 24495-3:** applies to plain science communication, not research-reporting or journal-methodology compliance.
+- **ISO 18587:** applies to full human post-editing of machine-translation output, not generic AI rewriting.
 
 ## Conflict precedence
 
-When selected profiles conflict, use this order:
+1. Law and regulation.
+2. Contract, procurement requirement, certification scheme, or governing publication rules.
+3. Approved organization terminology, policy, schema, and product contracts.
+4. Domain or document system.
+5. Safety and preservation of factual or normative meaning.
+6. Accessibility and localization requirements.
+7. General plain-language principles.
+8. Editorial preferences.
 
-1. law, regulation, contract, and governing publication rules;
-2. safety and preservation of factual or normative meaning;
-3. authoritative organization terminology and product contracts;
-4. domain/document standard;
-5. accessibility requirements;
-6. general plain-language principles;
-7. editorial preferences.
-
-Report the conflict rather than silently blending incompatible rules.
+Report unresolved conflicts instead of silently blending incompatible rules.
